@@ -39,6 +39,15 @@ azure_rm_functionapp https://docs.ansible.com/ansible/latest/modules/azure_rm_fu
 https://github.com/ansible-collection-migration/ansible.community/blob/master/plugins/modules/azure_rm_functionapp.py
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-infrastructure-as-code
 
+FunctionMetadataResponse
+https://github.com/Azure/azure-functions-host/blob/dev/src/WebJobs.Script.WebHost/Models/FunctionMetadataResponse.cs
+
+https://docs.microsoft.com/en-us/rest/api/appservice/WebApps/CreateFunction
+
+script_href
+https://github.com/Azure/azure-functions-host/blob/621df2c50b5ab96dbd403d173161a4d7820d02c0/src/WebJobs.Script.WebHost/Extensions/FunctionMetadataExtensions.cs#L57
+functionMetadata.ScriptFile
+
 ** "Microsoft.Web/sites/hostNameBindings"
 
 
