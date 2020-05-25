@@ -1,0 +1,41 @@
+
+* https://github.com/microsoft/AnsibleLabs/tree/master/lab-05-azure-functions-serverless-web
+azure_rm_containerregistry
+azure_rm_appserviceplan
+azure_rm_storageblob
+azure_rm_storageaccount
+azure_rm_functionapp
+azure_rm_resource
+ provider: containerregistry
+ resource_type: registries
+        
+* Function template
+jq https://github.com/deployswipe/azure_eval_function/blob/master/azure/resources/eval.json 
+.resources[]|.type
+
+gives us 
+
+** "Microsoft.Web/sites"
+** "Microsoft.Web/sites/config"
+** "Microsoft.Web/sites/functions" azure_rm_functionapp
+https://docs.microsoft.com/en-us/rest/api/appservice/webapps/createfunction
+azure_rm_functionapp https://docs.ansible.com/ansible/latest/modules/azure_rm_functionapp_module.html
+https://github.com/ansible-collection-migration/ansible.community/blob/master/plugins/modules/azure_rm_functionapp.py
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-infrastructure-as-code
+
+** "Microsoft.Web/sites/hostNameBindings"
+
+
+* storage template
+** "Microsoft.Storage/storageAccounts"
+** "Microsoft.Storage/storageAccounts/blobServices"
+** "Microsoft.Storage/storageAccounts/fileServices"
+** "Microsoft.Storage/storageAccounts/fileServices/shares"
+
+
+* Recipes
+other recipes use this resources as well in conjuction with the function azure_rm_functionapp
+
+azure_rm_storageaccount
+
+https://github.com/hashy0917/ansible-study/blob/master/OpenStack/ansible/test/integration/targets/azure_rm_functionapp/tasks/main.yml
