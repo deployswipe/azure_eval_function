@@ -9,7 +9,7 @@ azure_rm_resource
  provider: containerregistry
  resource_type: registries
         
-* Function template
+* Function template ASP-eval-a755
 jq https://github.com/deployswipe/azure_eval_function/blob/master/azure/resources/eval.json 
 .resources[]|.type
 
@@ -26,12 +26,20 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-infrastructure-
 ** "Microsoft.Web/sites/hostNameBindings"
 
 
-* storage template
+* storage template cloud-shell-storage-eastus
 ** "Microsoft.Storage/storageAccounts"
 ** "Microsoft.Storage/storageAccounts/blobServices"
 ** "Microsoft.Storage/storageAccounts/fileServices"
 ** "Microsoft.Storage/storageAccounts/fileServices/shares"
 
+* Storage2 storageaccounteval8060 
+** "Microsoft.Storage/storageAccounts"
+** "Microsoft.Storage/storageAccounts/blobServices"
+** "Microsoft.Storage/storageAccounts/fileServices"
+** "Microsoft.Storage/storageAccounts/blobServices/containers"
+
+* ASP-eval-a755
+"Microsoft.Web/serverfarms",
 
 * Recipes
 other recipes use this resources as well in conjuction with the function azure_rm_functionapp
