@@ -1,0 +1,9 @@
+- name: play
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Create a function app
+    azure_rm_functionapp:
+       resource_group: eval
+       name: eval2
+       storage_account: storageaccounteval8060
