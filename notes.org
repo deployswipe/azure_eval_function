@@ -1,3 +1,12 @@
+* resources 
+NAME	TYPE	RESOURCE GROUP	LOCATION	SUBSCRIPTION
+ASP-eval-a755	App Service plan	eval	East US	Azure subscription 1
+cs2100320008d1b3a06	Storage account	cloud-shell-storage-eastus	East US	Azure subscription 1
+evalpython	App Service	eval	East US	Azure subscription 1
+evalpython	Application Insights	eval	East US	Azure subscription 1
+storageaccounteval8060	Storage account	eval	East US	Azure subscription 1
+
+
 
 * https://github.com/microsoft/AnsibleLabs/tree/master/lab-05-azure-functions-serverless-web
 azure_rm_containerregistry
