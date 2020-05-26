@@ -1,9 +1,35 @@
 - name: play
+  vars:
+    ansible_python_interpreter: /usr/bin/python3.5
+    storage_account_name: evalteststore123
+    resource_group: "eval"
+    plan_name: "eval-plan123"
+    
   hosts: localhost
   gather_facts: false
   tasks:
+  #- debugtrace:
+  - azure.azcollection.azure_rm_appserviceplan:
+      resource_group: '{{ resource_group }}'
+      name: '{{ plan_name }}'
+      sku: S1
+      is_linux: true
+      number_of_workers: 1
+                      
+  - name: create storage account for function apps
+    azure.azcollection.azure_rm_storageaccount:
+      resource_group: '{{ resource_group }}'
+      name: '{{ storage_account_name }}'
+      account_type: Standard_LRS
   - name: Create a function app
-    azure_rm_functionapp:
-       resource_group: eval
-       name: eval2
-       storage_account: storageaccounteval8060
+    azure.azcollection.azure_rm_functionapp:   
+       resource_group: '{{ resource_group }}'
+       name: eval3
+       storage_account: '{{ storage_account_name }}'
+       plan:
+         resource_group: '{{ resource_group }}'
+         name: '{{ plan_name }}'
+       container_settings:
+         name: httpd
+       app_settings:
+         FUNCTIONS_EXTENSION_VERSION: ~2
