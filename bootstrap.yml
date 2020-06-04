@@ -1,0 +1,8 @@
+
+- name : bootstrap
+  hosts: bootstrap
+  tasks:
+    - include_role :
+        name: bootstrap
+      tags:
+        - always

@@ -1,0 +1,8 @@
+
+- name : bootstrap
+  hosts: bootstrap
+  tasks:
+    - pip:
+      #pip3 install
+      #name: -e git+https://github.com/ansible/ansible.git@v2.9.9#egg=ansible
+        name: ansible==2.9.9

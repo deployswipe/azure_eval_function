@@ -1,0 +1,3 @@
+do:
+	docker build .
+

@@ -1,0 +1,6 @@
+
+- name : bootstrap
+  hosts: bootstrap
+  tasks:
+    - apt:
+        name: python3-pip

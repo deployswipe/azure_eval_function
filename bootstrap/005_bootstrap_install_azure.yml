@@ -1,0 +1,5 @@
+
+- name : install requirements for azure
+  hosts: bootstrap
+  tasks:
+    - shell: pip3 install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt

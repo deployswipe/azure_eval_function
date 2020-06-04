@@ -1,0 +1,5 @@
+
+- name : bootstrap
+  hosts: bootstrap
+  tasks:
+    - shell: ansible-galaxy collection install -r /opt/bootstrap/requirements.yml

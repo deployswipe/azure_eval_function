@@ -1,6 +1,6 @@
 - name: play
   vars:
-    ansible_python_interpreter: /usr/bin/python3.5
+    ansible_python_interpreter: /usr/bin/python3
     storage_account_name: evalteststore123
     resource_group: "eval"
     plan_name: "eval-plan123"

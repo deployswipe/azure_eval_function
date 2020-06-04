@@ -1,1 +1,2 @@
 azure-functions
+-e git+https://github.com/ansible/ansible.git@v2.9.9#egg=ansible
