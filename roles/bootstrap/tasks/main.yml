@@ -1,0 +1,20 @@
+- apt:
+    name: python3-pip
+  tags:
+    - step1
+      
+- pip:
+    #pip3 install
+    #name: -e git+https://github.com/ansible/ansible.git@v2.9.9#egg=ansible
+    name: ansible=2.9.9
+  tags:
+    - step2
+
+- shell: ansible-galaxy collection install -r requirements.yml
+  tags:
+    - step3
+
+- shell: ansible-galaxy role install -r requirements.yml
+  tags:
+    - step4
+
